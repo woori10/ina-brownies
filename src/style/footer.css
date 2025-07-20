@@ -1,0 +1,56 @@
+/* General Footer Styling */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #E5BFA3;
+  color: white;
+  font-family: 'Urbanist', sans-serif;
+}
+
+/* Section styling */
+.footer-left,
+.footer-menu,
+.footer-contact {
+  flex: 1 1 250px;
+  margin: 1rem;
+}
+
+.footer-left {
+    font-weight: 600;
+}
+
+/* Responsive Text */
+.footer h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Optional: Nempel di bawah */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  flex: 1;
+}

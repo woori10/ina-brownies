@@ -1,13 +1,17 @@
-import './index.css'
+import Navbar from "./atoms/Navbar";
+import Footer from "./atoms/Footer";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-red-600">
-        Hello World
-      </h1>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow pt-16">
+        <Home />
+      </main>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

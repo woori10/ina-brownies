@@ -1,0 +1,72 @@
+/* navbar.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap');
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #E5BFA3;
+  padding: 10px 20px;
+  color: white;
+  position: relative;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: bold;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 20px;
+  font-weight: 500;
+}
+
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.burger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Untuk tampilan mobile */
+@media screen and (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: #E5BFA3;
+    padding: 10px 0;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-menu a {
+    padding: 10px 20px;
+  }
+}

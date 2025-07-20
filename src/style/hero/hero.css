@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap');
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 8rem;
+  background-color: #ffffff;
+  gap: 2rem;
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-left h1 {
+  font-size: 2.5rem;
+  font-family: 'Urbanist', sans-serif;
+  color: #2e2e2e;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.hero-left p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  background-color: #E5BFA3;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #6e2f00;
+}
+
+.hero-button-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image-placeholder {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 4/3;
+  background-color: #FFE9D9;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .hero-left p {
+    font-size: 0.95rem;
+  }
+
+  .hero-image-placeholder {
+    max-width: 75%;
+    margin-bottom: 2rem;
+  }
+
+  .hero-button-wrapper {
+    justify-content: center;
+  }
+}

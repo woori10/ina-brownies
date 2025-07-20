@@ -1,0 +1,42 @@
+.how-to-order-container {
+  text-align: center;
+  background-color: white;
+}
+
+.how-to-order-title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1f2937; /* gray-800 */
+}
+
+.how-to-order-step {
+  background-color: #FFE9D9; /* orange-100 */
+  color: #1f2937;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.how-to-order-step:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive untuk desktop */
+@media (min-width: 768px) {
+  .how-to-order-container {
+    padding: 6rem 2rem;
+  }
+
+  .how-to-order-step {
+    max-width: 768px;
+    font-size: 1.125rem; /* text-lg */
+  }
+}
