@@ -1,5 +1,5 @@
 .things-section {
-  padding: 40px 20px;
+  padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -50,6 +50,11 @@
   background-color: #d8b99c;
   z-index: -1;
   border-radius: 8px;
+}
+
+.bake-item.reverse .bake-image::before {
+  left: -12px;
+  top: 12px;
 }
 
 .bake-text {

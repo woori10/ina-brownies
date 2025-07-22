@@ -7,28 +7,79 @@
   align-items: center;
   justify-content: space-between;
   background-color: #E5BFA3;
-  padding: 10px 80px;
+  padding: 16px 2rem;
   color: white;
   position: relative;
   font-family: 'Urbanist', sans-serif;
-  font-weight: bold;
+}
+
+.navbar > .burger,
+.navbar > .navbar-logo,
+.navbar > .navbar-cart {
+  flex-shrink: 0;
+}
+
+.navbar > .navbar-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-weight: 500;
 }
 
 .navbar-logo {
   font-size: 1.5rem;
   font-weight: 600;
   font-family: 'Urbanist', sans-serif;
+  
 }
+
+.cart-icon-wrapper {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
 
 .navbar-menu {
-  display: flex;
-  gap: 20px;
+  gap: 16px;
   font-weight: 500;
+  padding-left: 40rem;
+  font-family: 'Urbanist', sans-serif;
 }
 
-.navbar-menu a {
-  color: white;
-  text-decoration: none;
+.navbar-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.navbar-menu hr{
+   color: #3A1F12;
+}
+
+.navbar-menu li:hover {
+  color: #6B3E26; /* contoh warna saat hover */
+}
+
+.navbar-menu li:active {
+  color: #3A1F12; /* contoh warna saat diklik */
 }
 
 .burger {
@@ -45,7 +96,6 @@
   border-radius: 2px;
 }
 
-/* Untuk tampilan mobile */
 @media screen and (max-width: 768px) {
   .burger {
     display: flex;
@@ -59,14 +109,14 @@
     flex-direction: column;
     width: 100%;
     background-color: #E5BFA3;
-    padding: 10px 0;
+    padding: 16px 2rem;
   }
 
   .navbar-menu.active {
     display: flex;
   }
 
-  .navbar-menu a {
-    padding: 10px 20px;
+  .navbar-menu li {
+    padding: 0.5rem ;
   }
 }

@@ -1,5 +1,5 @@
-import CardReview from '../atoms/CardReview';
 import '../style/hero/hero4.css';
+import CardReview from './CardReview';
 
 const Hero4 = () => {
   return (

@@ -1,4 +1,4 @@
-import '../style/cardreview.css'
+import '../style/cardreview.css';
 
 const CardReview = ({ name, order, text }) => {
   return (

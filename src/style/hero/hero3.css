@@ -1,6 +1,7 @@
 .how-to-order-container {
   text-align: center;
   background-color: white;
+  padding: 2rem;
 }
 
 .how-to-order-title {
@@ -31,10 +32,6 @@
 
 /* Responsive untuk desktop */
 @media (min-width: 768px) {
-  .how-to-order-container {
-    padding: 6rem 2rem;
-  }
-
   .how-to-order-step {
     max-width: 768px;
     font-size: 1.125rem; /* text-lg */
