@@ -4,10 +4,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../style/navbar.css";
 
-
 const Navbar = () => {
-
-  const [menuOpen, setMenuOpen] = useState("home");
+  const [activePage, setActivePage] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false); // boolean
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -15,24 +14,29 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
+      
       <div className="burger" onClick={toggleMenu}>
         <span></span>
         <span></span>
         <span></span>
       </div>
 
-      <div className="navbar-logo" src=""><Link to="/admin">Ina Brownies</Link></div>
+      <div className="navbar-logo">
+        <Link to="/admin">Ina Brownies</Link>
+      </div>
 
       <div className={`navbar-menu ${menuOpen ? "active" : ""}`}>
-        <li onClick={()=>{setMenuOpen("home")}}><Link to="/">Beranda</Link>{menuOpen==="home"?<hr/>:<></>}</li>
-        <li onClick={()=>{setMenuOpen("produk")}}><Link to="/produk">Produk</Link> {menuOpen==="produk"?<hr/>:<></>}</li>
-        <li onClick={()=>{setMenuOpen("riwayat")}}><Link to="/riwayat">Riwayat</Link> {menuOpen==="riwayat"?<hr/>:<></>}</li>
-        <li onClick={()=>{setMenuOpen("kontak")}}><Link to="/kontak">Kontak</Link> {menuOpen==="kontak"?<hr/>:<></>}</li>
+        <li onClick={() => setActivePage("home")}><Link to="/">Beranda</Link>{activePage === "home" && <hr />}</li>
+        <li onClick={() => setActivePage("produk")}><Link to="/produk">Produk</Link>{activePage === "produk" && <hr />}</li>
+        <li onClick={() => setActivePage("riwayat")}><Link to="/riwayat">Riwayat</Link>{activePage === "riwayat" && <hr />}</li>
+        <li onClick={() => setActivePage("kontak")}><Link to="/kontak">Kontak</Link>{activePage === "kontak" && <hr />}</li>
       </div>
       
       <div className="navbar-cart">
         <div className="cart-icon-wrapper">
-          <Link to="/keranjang"><FontAwesomeIcon icon={faShoppingCart} size="lg" /></Link>
+          <Link to="/keranjang">
+            <FontAwesomeIcon icon={faShoppingCart} size="lg" />
+          </Link>
           <span className="cart-count">0</span>
         </div>
       </div>

@@ -1,122 +1,144 @@
-/* navbar.css */
-
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap');
-
+/* General Styles */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #E5BFA3;
-  padding: 16px 2rem;
-  color: white;
-  position: relative;
-  font-family: 'Urbanist', sans-serif;
+  padding: 1rem 2rem ;
+  border-bottom: 1px solid #e3c7b5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
 }
 
-.navbar > .burger,
-.navbar > .navbar-logo,
-.navbar > .navbar-cart {
-  flex-shrink: 0;
-}
-
-.navbar > .navbar-menu {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  font-weight: 500;
-}
-
-.navbar-logo {
+/* Logo */
+.navbar-logo a {
+  text-decoration: none;
+  font-weight: 700;
   font-size: 1.5rem;
-  font-weight: 600;
-  font-family: 'Urbanist', sans-serif;
-  
+  color: white;
+}
+
+/* Burger Menu (Mobile) */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+/* Menu List */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.navbar-menu li {
+  position: relative;
+  color: white;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.navbar-menu a:hover {
+  color: #664F3E;
+}
+
+.navbar-menu li hr {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 75%;
+  border: 1px solid white;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+/* Cart */
+.navbar-cart {
+  position: relative;
 }
 
 .cart-icon-wrapper {
   position: relative;
-  cursor: pointer;
-  font-size: 1.2rem;
+  color: white;
+}
+
+.cart-icon-wrapper:hover{
+  color: #664F3E ;
 }
 
 .cart-count {
   position: absolute;
-  top: -6px;
+  top: -8px;
   right: -10px;
-  background-color: red;
-  color: white;
-  font-size: 10px;
-  padding: 2px 5px;
-  border-radius: 50%;
-  font-weight: bold;
+  background-color: white;
+  color: #E5BFA3;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 50%; 
+
 }
 
 
-.navbar-menu {
-  gap: 16px;
-  font-weight: 500;
-  padding-left: 40rem;
-  font-family: 'Urbanist', sans-serif;
-}
-
-.navbar-menu li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.navbar-menu hr{
-   color: #3A1F12;
-}
-
-.navbar-menu li:hover {
-  color: #6B3E26; /* contoh warna saat hover */
-}
-
-.navbar-menu li:active {
-  color: #3A1F12; /* contoh warna saat diklik */
-}
-
-.burger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 4px;
-}
-
-.burger span {
-  height: 3px;
-  width: 25px;
-  background: white;
-  border-radius: 2px;
-}
-
-@media screen and (max-width: 768px) {
+/* Responsive */
+@media (max-width: 768px) {
   .burger {
     display: flex;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .navbar {
+    justify-content: center;
+    position: relative;
   }
 
   .navbar-menu {
-    display: none;
     position: absolute;
-    top: 50px;
+    align-items: center;
+    justify-content: center ;
+    top: 60px;
     left: 0;
-    flex-direction: column;
-    width: 100%;
     background-color: #E5BFA3;
-    padding: 16px 2rem;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+    display: none;
   }
 
   .navbar-menu.active {
     display: flex;
   }
 
-  .navbar-menu li {
-    padding: 0.5rem ;
+  .navbar-menu li hr {
+    display: none;
+  }
+
+  .navbar-cart {
+    margin-left: auto;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }

@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem;
   background-color: #E5BFA3;
   color: white;
   font-family: 'Urbanist', sans-serif;
@@ -13,8 +13,8 @@
 .footer-left,
 .footer-menu,
 .footer-contact {
-  flex: 1 1 250px;
-  margin: 1rem;
+  flex: 1 1 100px;
+  margin: 1rem 0.5rem;
 }
 
 .footer-left {
@@ -41,16 +41,25 @@
   .footer {
     flex-direction: column;
     text-align: center;
+    padding-bottom: 1rem;
+  }
+
+    /* Optional: Nempel di bawah */
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .content-wrap {
+    flex: 1;
+  }
+
+  .footer-left,
+  .footer-menu,
+  .footer-contact {
+    margin: 0.5rem 0; /* vertikal lebih kecil */
   }
 }
 
-/* Optional: Nempel di bawah */
-.page-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
-.content-wrap {
-  flex: 1;
-}
